@@ -3,10 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import LogoS from "../../assets/images/logo-s.png";
 import LogoSubtitle from "../../assets/images/logo_sub.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHome, faUser, faLinkedin } from "@fortawesome/free-solid-svg-icons";
 
-const Sidebar = () => {
-  <div className='nav-bar'>
+const Sidebar = () => (
+  < div className='nav-bar' >
     <Link
       className='logo'
       to='/'
@@ -46,7 +46,7 @@ const Sidebar = () => {
       <NavLink
         exact='true'
         activeclass='active'
-        className='contact'
+        className='contact-link'
         to='/contact'
       >
         <FontAwesomeIcon
@@ -55,7 +55,17 @@ const Sidebar = () => {
         ></FontAwesomeIcon>
       </NavLink>
     </nav>
-  </div>;
-};
+    <ul>
+      <li>
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/paolo-bosa-36847a165/">
+          <FontAwesomeIcon icon={faEnvelope} color="4d4d4e"></FontAwesomeIcon>
+        </a>
+        <a target="_blank" rel="noreferrer" href="https://github.com/">
+          <FontAwesomeIcon icon={faEnvelope} color="4d4d4e"></FontAwesomeIcon>
+        </a>
+      </li>
+    </ul>
+  </div >
+)
 
 export default Sidebar;
